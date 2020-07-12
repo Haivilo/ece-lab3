@@ -12,7 +12,7 @@ entity LogicalStep_Lab3_top is port (
 end LogicalStep_Lab3_top;
 
 architecture design of LogicalStep_Lab3_top is
-	component singlecmp is
+	component simplecmp is
 		port (
 			A, B : in std_logic;
 			AgreaterB, AequalB, AsmallerB  : out std_logic
@@ -54,7 +54,7 @@ begin
 A <= sw(0);
 B <= sw(1);
 
-inst1: singlecmp port map(
+inst1: simplecmp port map(
 	 A,B,
 	leds(0),leds(1),leds(2)
 	);
