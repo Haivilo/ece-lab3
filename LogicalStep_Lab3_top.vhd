@@ -12,12 +12,19 @@ entity LogicalStep_Lab3_top is port (
 end LogicalStep_Lab3_top;
 
 architecture design of LogicalStep_Lab3_top is
-	component singlecmp is
-		port (
-			A, B : in std_logic;
-			AgreaterB, AequalB, AsmallerB  : out std_logic
+	-- component singlecmp is
+		-- port (
+			-- A, B : in std_logic;
+			-- AgreaterB, AequalB, AsmallerB  : out std_logic
+		-- );
+	-- end component;
+	component fourcmp port (
+		inputA: in std_logic_vector(3 downto 0);
+		inputB: in std_logic_vector(3 downto 0);
+		results: out std_logic_vector(2 downto 0)
 		);
 	end component;
+
 --
 -- Provided Project Components Used
 ------------------------------------------------------------------- 
@@ -44,22 +51,27 @@ architecture design of LogicalStep_Lab3_top is
 
 ------------------------------------------------------------------	
 -- Create any signals to be used
-signal A,B	: std_logic;
+signal A4bit,B4bit	: std_logic_vector (3 downto 0);
 
 ------------------------------------------------------------------- 
 	
 
 
-begin
-A <= sw(0);
-B <= sw(1);
+-- begin
+-- A <= sw(0);
+-- B <= sw(1);
 
-inst1: singlecmp port map(
-	 A,B,
-	leds(0),leds(1),leds(2)
-	);
+-- inst1: singlecmp port map(
+-- 	 A,B,
+-- 	leds(0),leds(1),leds(2)
+-- 	);
 	
-
+begin
+	A4bit <= sw(3 downto 0);
+	B4bit <= sw(7 downto 4);
+	
+	inst1: fourcmp port map (A4bit, B4bit, leds(2 downto 0));
+	 
 	
 end design;
 

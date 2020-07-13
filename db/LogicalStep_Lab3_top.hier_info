@@ -4,37 +4,87 @@ pb[0] => ~NO_FANOUT~
 pb[1] => ~NO_FANOUT~
 pb[2] => ~NO_FANOUT~
 pb[3] => ~NO_FANOUT~
-sw[0] => singlecmp:inst1.A
-sw[1] => singlecmp:inst1.B
-sw[2] => ~NO_FANOUT~
-sw[3] => ~NO_FANOUT~
-sw[4] => ~NO_FANOUT~
-sw[5] => ~NO_FANOUT~
-sw[6] => ~NO_FANOUT~
-sw[7] => ~NO_FANOUT~
-leds[0] << singlecmp:inst1.AgreaterB
-leds[1] << singlecmp:inst1.AequalB
-leds[2] << singlecmp:inst1.AsmallerB
-leds[3] << <GND>
-leds[4] << <GND>
-leds[5] << <GND>
-leds[6] << <GND>
-leds[7] << <GND>
-leds[8] << <GND>
-leds[9] << <GND>
-leds[10] << <GND>
-leds[11] << <GND>
+sw[0] => fourcmp:inst1.inputA[0]
+sw[1] => fourcmp:inst1.inputA[1]
+sw[2] => fourcmp:inst1.inputA[2]
+sw[3] => fourcmp:inst1.inputA[3]
+sw[4] => fourcmp:inst1.inputB[0]
+sw[5] => fourcmp:inst1.inputB[1]
+sw[6] => fourcmp:inst1.inputB[2]
+sw[7] => fourcmp:inst1.inputB[3]
+leds[0] <= fourcmp:inst1.results[0]
+leds[1] <= fourcmp:inst1.results[1]
+leds[2] <= fourcmp:inst1.results[2]
+leds[3] <= <GND>
+leds[4] <= <GND>
+leds[5] <= <GND>
+leds[6] <= <GND>
+leds[7] <= <GND>
+leds[8] <= <GND>
+leds[9] <= <GND>
+leds[10] <= <GND>
+leds[11] <= <GND>
 
 
-|LogicalStep_Lab3_top|singlecmp:inst1
-A => AgreaterB.IN0
-A => AequalB.IN0
-A => AsmallerB.IN0
-B => AsmallerB.IN1
-B => AequalB.IN1
-B => AgreaterB.IN1
-AgreaterB <= AgreaterB.DB_MAX_OUTPUT_PORT_TYPE
-AequalB <= AequalB.DB_MAX_OUTPUT_PORT_TYPE
-AsmallerB <= AsmallerB.DB_MAX_OUTPUT_PORT_TYPE
+|LogicalStep_Lab3_top|fourcmp:inst1
+inputA[0] => singlecmp:inst4.A
+inputA[1] => singlecmp:inst3.A
+inputA[2] => singlecmp:inst2.A
+inputA[3] => singlecmp:inst1.A
+inputB[0] => singlecmp:inst4.B
+inputB[1] => singlecmp:inst3.B
+inputB[2] => singlecmp:inst2.B
+inputB[3] => singlecmp:inst1.B
+results[0] <= results.DB_MAX_OUTPUT_PORT_TYPE
+results[1] <= results.DB_MAX_OUTPUT_PORT_TYPE
+results[2] <= results.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|fourcmp:inst1|singlecmp:inst1
+A => sout.IN0
+A => sout.IN0
+A => sout.IN0
+B => sout.IN1
+B => sout.IN1
+B => sout.IN1
+sout[0] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|fourcmp:inst1|singlecmp:inst2
+A => sout.IN0
+A => sout.IN0
+A => sout.IN0
+B => sout.IN1
+B => sout.IN1
+B => sout.IN1
+sout[0] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|fourcmp:inst1|singlecmp:inst3
+A => sout.IN0
+A => sout.IN0
+A => sout.IN0
+B => sout.IN1
+B => sout.IN1
+B => sout.IN1
+sout[0] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|fourcmp:inst1|singlecmp:inst4
+A => sout.IN0
+A => sout.IN0
+A => sout.IN0
+B => sout.IN1
+B => sout.IN1
+B => sout.IN1
+sout[0] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 
 

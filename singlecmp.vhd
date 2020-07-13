@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity singlecmp is
  	port (
 			A, B : in std_logic;
-			AgreaterB, AequalB, AsmallerB  : out std_logic
+			sout  : out std_logic_vector(2 downto 0)
 			);
 
  end singlecmp;
@@ -13,9 +13,9 @@ entity singlecmp is
  
  begin
  
- AgreaterB <= A AND (NOT B);
- AsmallerB <= B AND (NOT A);
- AequalB <= A XNOR B;
+	sout(0) <= A AND (NOT B);
+	sout(1) <= B AND (NOT A);
+	sout(2) <= A XNOR B;
  
  
  end singlecmp_logic;
