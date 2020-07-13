@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LogicalStep_Lab3_top
-Mon Jul 13 17:54:20 2020
+Mon Jul 13 18:13:01 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jul 13 17:54:20 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jul 13 18:13:00 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; LogicalStep_Lab3_top                        ;
 ; Top-level Entity Name              ; LogicalStep_Lab3_top                        ;
@@ -267,10 +267,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Jul 13 17:53:53 2020
+    Info: Processing started: Mon Jul 13 18:12:33 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning (12090): Entity "mux" obtained from "mux.vhd" instead of from Quartus Prime megafunction library File: N:/ECE-125/Lab3/mux.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
+    Info (12022): Found design unit 1: mux-mux_logic File: N:/ECE-125/Lab3/mux.vhd Line: 15
+    Info (12023): Found entity 1: mux File: N:/ECE-125/Lab3/mux.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file compx4.vhd
     Info (12022): Found design unit 1: Compx4-design File: N:/ECE-125/Lab3/Compx4.vhd Line: 13
     Info (12023): Found entity 1: Compx4 File: N:/ECE-125/Lab3/Compx4.vhd Line: 4
@@ -316,10 +320,10 @@ Info (21057): Implemented 34 device resources after synthesis - the final resour
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 12 output pins
     Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Mon Jul 13 17:54:20 2020
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Mon Jul 13 18:13:01 2020
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:20
 
 
