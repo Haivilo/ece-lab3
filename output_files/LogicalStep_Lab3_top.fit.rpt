@@ -1,5 +1,5 @@
 Fitter report for LogicalStep_Lab3_top
-Mon Jul 13 17:22:16 2020
+Mon Jul 13 17:52:49 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jul 13 17:22:16 2020       ;
+; Fitter Status                      ; Successful - Mon Jul 13 17:52:49 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; LogicalStep_Lab3_top                        ;
 ; Top-level Entity Name              ; LogicalStep_Lab3_top                        ;
@@ -334,14 +334,14 @@ The pin-out file can be found in N:/ECE-125/Lab3/output_files/LogicalStep_Lab3_t
 ; pb[1]  ; B5    ; 8        ; 6            ; 10           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; pb[2]  ; P3    ; 2        ; 0            ; 5            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; pb[3]  ; D14   ; 7        ; 24           ; 25           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; sw[0]  ; C2    ; 8        ; 1            ; 10           ; 28           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; sw[1]  ; M8    ; 2        ; 0            ; 6            ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; sw[2]  ; E6    ; 8        ; 1            ; 10           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; sw[3]  ; C5    ; 8        ; 3            ; 10           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; sw[4]  ; N2    ; 2        ; 0            ; 6            ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; sw[0]  ; N2    ; 2        ; 0            ; 6            ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; sw[1]  ; C2    ; 8        ; 1            ; 10           ; 28           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; sw[2]  ; C3    ; 8        ; 1            ; 10           ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; sw[3]  ; N3    ; 2        ; 0            ; 6            ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; sw[4]  ; M8    ; 2        ; 0            ; 6            ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 ; sw[5]  ; M9    ; 2        ; 0            ; 6            ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; sw[6]  ; C3    ; 8        ; 1            ; 10           ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; sw[7]  ; N3    ; 2        ; 0            ; 6            ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; sw[6]  ; C5    ; 8        ; 3            ; 10           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; sw[7]  ; E6    ; 8        ; 1            ; 10           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -492,10 +492,10 @@ The pin-out file can be found in N:/ECE-125/Lab3/output_files/LogicalStep_Lab3_t
 ; B21      ;            ;          ; NC                                             ;        ;                       ;         ; --         ;                 ; --       ; --           ;
 ; B22      ;            ;          ; NC                                             ;        ;                       ;         ; --         ;                 ; --       ; --           ;
 ; C1       ; 21         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; --       ; --           ;
-; C2       ; 251        ; 8        ; sw[0]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; C3       ; 249        ; 8        ; sw[6]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; C2       ; 251        ; 8        ; sw[1]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; C3       ; 249        ; 8        ; sw[2]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C4       ; 239        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; C5       ; 241        ; 8        ; sw[3]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; C5       ; 241        ; 8        ; sw[6]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C6       ; 229        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C7       ; 219        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C8       ; 217        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -540,7 +540,7 @@ The pin-out file can be found in N:/ECE-125/Lab3/output_files/LogicalStep_Lab3_t
 ; E3       ; 3          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E4       ; 1          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E5       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; E6       ; 250        ; 8        ; sw[2]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; E6       ; 250        ; 8        ; sw[7]                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E7       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; E8       ; 240        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; E9       ; 230        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -696,7 +696,7 @@ The pin-out file can be found in N:/ECE-125/Lab3/output_files/LogicalStep_Lab3_t
 ; M5       ; 26         ; 1B       ; ~ALTERA_TDO~                                   ; output ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M6       ;            ; 1B       ; VCCIO1B                                        ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; M7       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; M8       ; 40         ; 2        ; sw[1]                                          ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M8       ; 40         ; 2        ; sw[4]                                          ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M9       ; 42         ; 2        ; sw[5]                                          ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M10      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; M11      ;            ; --       ; VCC                                            ; power  ;                       ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -712,8 +712,8 @@ The pin-out file can be found in N:/ECE-125/Lab3/output_files/LogicalStep_Lab3_t
 ; M21      ; 144        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M22      ; 147        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N1       ; 55         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; N2       ; 43         ; 2        ; sw[4]                                          ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
-; N3       ; 41         ; 2        ; sw[7]                                          ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N2       ; 43         ; 2        ; sw[0]                                          ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N3       ; 41         ; 2        ; sw[3]                                          ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N4       ; 36         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N5       ; 38         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N6       ;            ; 2        ; VCCIO2                                         ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -913,13 +913,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; leds[9]  ; Incomplete set of assignments ;
 ; leds[10] ; Incomplete set of assignments ;
 ; leds[11] ; Incomplete set of assignments ;
-; sw[7]    ; Incomplete set of assignments ;
-; sw[6]    ; Incomplete set of assignments ;
 ; sw[3]    ; Incomplete set of assignments ;
 ; sw[2]    ; Incomplete set of assignments ;
+; sw[6]    ; Incomplete set of assignments ;
+; sw[7]    ; Incomplete set of assignments ;
+; sw[1]    ; Incomplete set of assignments ;
 ; sw[0]    ; Incomplete set of assignments ;
 ; sw[4]    ; Incomplete set of assignments ;
-; sw[1]    ; Incomplete set of assignments ;
 ; sw[5]    ; Incomplete set of assignments ;
 ; clk_in   ; Missing location assignment   ;
 ; pb[0]    ; Missing location assignment   ;
@@ -938,13 +938,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; leds[9]  ; Missing location assignment   ;
 ; leds[10] ; Missing location assignment   ;
 ; leds[11] ; Missing location assignment   ;
-; sw[7]    ; Missing location assignment   ;
-; sw[6]    ; Missing location assignment   ;
 ; sw[3]    ; Missing location assignment   ;
 ; sw[2]    ; Missing location assignment   ;
+; sw[6]    ; Missing location assignment   ;
+; sw[7]    ; Missing location assignment   ;
+; sw[1]    ; Missing location assignment   ;
 ; sw[0]    ; Missing location assignment   ;
 ; sw[4]    ; Missing location assignment   ;
-; sw[1]    ; Missing location assignment   ;
 ; sw[5]    ; Missing location assignment   ;
 +----------+-------------------------------+
 
@@ -982,13 +982,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; leds[9]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; leds[10] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; leds[11] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; sw[7]    ; Input    ; --            ; (6) 873 ps    ; --                    ; --  ; --   ;
-; sw[6]    ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; sw[3]    ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; sw[3]    ; Input    ; --            ; (6) 873 ps    ; --                    ; --  ; --   ;
 ; sw[2]    ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; sw[0]    ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; sw[4]    ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
-; sw[1]    ; Input    ; --            ; (0) 0 ps      ; --                    ; --  ; --   ;
+; sw[6]    ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; sw[7]    ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; sw[1]    ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; sw[0]    ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
+; sw[4]    ; Input    ; --            ; (0) 0 ps      ; --                    ; --  ; --   ;
 ; sw[5]    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1003,37 +1003,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; pb[1]                            ;                   ;         ;
 ; pb[2]                            ;                   ;         ;
 ; pb[3]                            ;                   ;         ;
-; sw[7]                            ;                   ;         ;
-;      - Compx4:inst1|results~0    ; 1                 ; 6       ;
-;      - Compx4:inst1|results[0]~1 ; 1                 ; 6       ;
-;      - Compx4:inst1|results[2]~5 ; 1                 ; 6       ;
-; sw[6]                            ;                   ;         ;
-;      - Compx4:inst1|results~0    ; 0                 ; 6       ;
-;      - Compx4:inst1|results[0]~1 ; 0                 ; 6       ;
-;      - Compx4:inst1|results[2]~5 ; 0                 ; 6       ;
 ; sw[3]                            ;                   ;         ;
-;      - Compx4:inst1|results~0    ; 1                 ; 6       ;
-;      - Compx4:inst1|results[0]~1 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[0]~0 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[0]~2 ; 1                 ; 6       ;
 ;      - Compx4:inst1|results[2]~5 ; 1                 ; 6       ;
 ; sw[2]                            ;                   ;         ;
-;      - Compx4:inst1|results~0    ; 0                 ; 6       ;
-;      - Compx4:inst1|results[0]~1 ; 0                 ; 6       ;
-;      - Compx4:inst1|results[2]~5 ; 0                 ; 6       ;
-; sw[0]                            ;                   ;         ;
-;      - Compx4:inst1|results[0]~2 ; 1                 ; 6       ;
-;      - Compx4:inst1|results[1]   ; 1                 ; 6       ;
-;      - Compx4:inst1|results[2]~6 ; 1                 ; 6       ;
-; sw[4]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~0 ; 0                 ; 6       ;
 ;      - Compx4:inst1|results[0]~2 ; 0                 ; 6       ;
-;      - Compx4:inst1|results[1]   ; 0                 ; 6       ;
-;      - Compx4:inst1|results[2]~6 ; 0                 ; 6       ;
+;      - Compx4:inst1|results[2]~5 ; 0                 ; 6       ;
+; sw[6]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~0 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[0]~2 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[2]~5 ; 1                 ; 6       ;
+; sw[7]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~0 ; 0                 ; 6       ;
+;      - Compx4:inst1|results[0]~2 ; 0                 ; 6       ;
+;      - Compx4:inst1|results[2]~5 ; 0                 ; 6       ;
 ; sw[1]                            ;                   ;         ;
-;      - Compx4:inst1|results[0]~2 ; 1                 ; 0       ;
-;      - Compx4:inst1|results~4    ; 1                 ; 0       ;
+;      - Compx4:inst1|results[0]~1 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[1]~4 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[2]~6 ; 1                 ; 6       ;
+; sw[0]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~1 ; 0                 ; 6       ;
+;      - Compx4:inst1|results[1]~4 ; 0                 ; 6       ;
+;      - Compx4:inst1|results[2]~6 ; 0                 ; 6       ;
+; sw[4]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~1 ; 1                 ; 0       ;
+;      - Compx4:inst1|results[1]~4 ; 1                 ; 0       ;
 ;      - Compx4:inst1|results[2]~6 ; 1                 ; 0       ;
 ; sw[5]                            ;                   ;         ;
-;      - Compx4:inst1|results[0]~2 ; 0                 ; 0       ;
-;      - Compx4:inst1|results~4    ; 0                 ; 0       ;
+;      - Compx4:inst1|results[0]~1 ; 0                 ; 0       ;
+;      - Compx4:inst1|results[1]~4 ; 0                 ; 0       ;
 ;      - Compx4:inst1|results[2]~6 ; 0                 ; 0       ;
 +----------------------------------+-------------------+---------+
 
@@ -1203,13 +1203,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; leds[9]            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; leds[10]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; leds[11]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; sw[7]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; sw[6]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[3]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[2]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sw[6]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sw[7]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sw[1]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[0]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[4]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; sw[1]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sw[5]              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -1329,8 +1329,8 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file N:/ECE-125/Lab3/output_files/LogicalStep_Lab3_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5318 megabytes
-    Info: Processing ended: Mon Jul 13 17:22:19 2020
+    Info: Peak virtual memory: 5321 megabytes
+    Info: Processing ended: Mon Jul 13 17:52:52 2020
     Info: Elapsed time: 00:00:23
     Info: Total CPU time (on all processors): 00:00:05
 

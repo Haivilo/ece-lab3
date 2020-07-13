@@ -14,8 +14,8 @@ entity singlecmp is
  begin
  
 	sout(0) <= A AND (NOT B);
-	sout(1) <= B AND (NOT A);
-	sout(2) <= A XNOR B;
+	sout(1) <= A XNOR B;
+	sout(2) <= B AND (NOT A);
  
  
  end singlecmp_logic;
