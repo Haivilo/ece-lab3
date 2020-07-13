@@ -18,7 +18,7 @@ architecture design of LogicalStep_Lab3_top is
 			-- AgreaterB, AequalB, AsmallerB  : out std_logic
 		-- );
 	-- end component;
-	component fourcmp port (
+	component Compx4 port (
 		inputA: in std_logic_vector(3 downto 0);
 		inputB: in std_logic_vector(3 downto 0);
 		results: out std_logic_vector(2 downto 0)
@@ -70,7 +70,7 @@ begin
 	A4bit <= sw(3 downto 0);
 	B4bit <= sw(7 downto 4);
 	
-	inst1: fourcmp port map (A4bit, B4bit, leds(2 downto 0));
+	inst1: Compx4 port map (A4bit, B4bit, leds(2 downto 0));
 	 
 	
 end design;

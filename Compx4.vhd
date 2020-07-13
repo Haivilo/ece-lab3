@@ -1,16 +1,16 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity fourcmp is
+entity Compx4 is
 port (
       inputA: in std_logic_vector (3 downto 0);
   inputB: in std_logic_vector (3 downto 0);
   results: out std_logic_vector(2 downto 0)
   );
   
-end entity fourcmp;
+end entity Compx4;
 
-architecture design of fourcmp is
+architecture design of Compx4 is
 
 component singlecmp port (
       A, B: in std_logic;

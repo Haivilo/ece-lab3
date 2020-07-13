@@ -4,29 +4,29 @@ pb[0] => ~NO_FANOUT~
 pb[1] => ~NO_FANOUT~
 pb[2] => ~NO_FANOUT~
 pb[3] => ~NO_FANOUT~
-sw[0] => fourcmp:inst1.inputA[0]
-sw[1] => fourcmp:inst1.inputA[1]
-sw[2] => fourcmp:inst1.inputA[2]
-sw[3] => fourcmp:inst1.inputA[3]
-sw[4] => fourcmp:inst1.inputB[0]
-sw[5] => fourcmp:inst1.inputB[1]
-sw[6] => fourcmp:inst1.inputB[2]
-sw[7] => fourcmp:inst1.inputB[3]
-leds[0] <= fourcmp:inst1.results[0]
-leds[1] <= fourcmp:inst1.results[1]
-leds[2] <= fourcmp:inst1.results[2]
-leds[3] <= <GND>
-leds[4] <= <GND>
-leds[5] <= <GND>
-leds[6] <= <GND>
-leds[7] <= <GND>
-leds[8] <= <GND>
-leds[9] <= <GND>
-leds[10] <= <GND>
-leds[11] <= <GND>
+sw[0] => Compx4:inst1.inputA[0]
+sw[1] => Compx4:inst1.inputA[1]
+sw[2] => Compx4:inst1.inputA[2]
+sw[3] => Compx4:inst1.inputA[3]
+sw[4] => Compx4:inst1.inputB[0]
+sw[5] => Compx4:inst1.inputB[1]
+sw[6] => Compx4:inst1.inputB[2]
+sw[7] => Compx4:inst1.inputB[3]
+leds[0] << Compx4:inst1.results[0]
+leds[1] << Compx4:inst1.results[1]
+leds[2] << Compx4:inst1.results[2]
+leds[3] << <GND>
+leds[4] << <GND>
+leds[5] << <GND>
+leds[6] << <GND>
+leds[7] << <GND>
+leds[8] << <GND>
+leds[9] << <GND>
+leds[10] << <GND>
+leds[11] << <GND>
 
 
-|LogicalStep_Lab3_top|fourcmp:inst1
+|LogicalStep_Lab3_top|Compx4:inst1
 inputA[0] => singlecmp:inst4.A
 inputA[1] => singlecmp:inst3.A
 inputA[2] => singlecmp:inst2.A
@@ -40,7 +40,7 @@ results[1] <= results.DB_MAX_OUTPUT_PORT_TYPE
 results[2] <= results.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|fourcmp:inst1|singlecmp:inst1
+|LogicalStep_Lab3_top|Compx4:inst1|singlecmp:inst1
 A => sout.IN0
 A => sout.IN0
 A => sout.IN0
@@ -52,7 +52,7 @@ sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|fourcmp:inst1|singlecmp:inst2
+|LogicalStep_Lab3_top|Compx4:inst1|singlecmp:inst2
 A => sout.IN0
 A => sout.IN0
 A => sout.IN0
@@ -64,7 +64,7 @@ sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|fourcmp:inst1|singlecmp:inst3
+|LogicalStep_Lab3_top|Compx4:inst1|singlecmp:inst3
 A => sout.IN0
 A => sout.IN0
 A => sout.IN0
@@ -76,7 +76,7 @@ sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|fourcmp:inst1|singlecmp:inst4
+|LogicalStep_Lab3_top|Compx4:inst1|singlecmp:inst4
 A => sout.IN0
 A => sout.IN0
 A => sout.IN0

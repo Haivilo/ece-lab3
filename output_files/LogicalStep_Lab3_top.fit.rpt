@@ -1,5 +1,5 @@
 Fitter report for LogicalStep_Lab3_top
-Mon Jul 13 17:07:08 2020
+Mon Jul 13 17:22:16 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jul 13 17:07:08 2020       ;
+; Fitter Status                      ; Successful - Mon Jul 13 17:22:16 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; LogicalStep_Lab3_top                        ;
 ; Top-level Entity Name              ; LogicalStep_Lab3_top                        ;
@@ -949,14 +949,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                            ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                 ; Entity Name          ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------+----------------------+--------------+
-; |LogicalStep_Lab3_top      ; 10 (1)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 25   ; 0            ; 10 (1)       ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab3_top               ; LogicalStep_Lab3_top ; work         ;
-;    |fourcmp:inst1|         ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab3_top|fourcmp:inst1 ; fourcmp              ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------+----------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                           ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                ; Entity Name          ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------+----------------------+--------------+
+; |LogicalStep_Lab3_top      ; 10 (1)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 25   ; 0            ; 10 (1)       ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab3_top              ; LogicalStep_Lab3_top ; work         ;
+;    |Compx4:inst1|          ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0          ; |LogicalStep_Lab3_top|Compx4:inst1 ; Compx4               ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -993,49 +993,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-----------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                  ;
-+-----------------------------------+-------------------+---------+
-; Source Pin / Fanout               ; Pad To Core Index ; Setting ;
-+-----------------------------------+-------------------+---------+
-; clk_in                            ;                   ;         ;
-; pb[0]                             ;                   ;         ;
-; pb[1]                             ;                   ;         ;
-; pb[2]                             ;                   ;         ;
-; pb[3]                             ;                   ;         ;
-; sw[7]                             ;                   ;         ;
-;      - fourcmp:inst1|results~0    ; 1                 ; 6       ;
-;      - fourcmp:inst1|results[0]~1 ; 1                 ; 6       ;
-;      - fourcmp:inst1|results[2]~5 ; 1                 ; 6       ;
-; sw[6]                             ;                   ;         ;
-;      - fourcmp:inst1|results~0    ; 0                 ; 6       ;
-;      - fourcmp:inst1|results[0]~1 ; 0                 ; 6       ;
-;      - fourcmp:inst1|results[2]~5 ; 0                 ; 6       ;
-; sw[3]                             ;                   ;         ;
-;      - fourcmp:inst1|results~0    ; 1                 ; 6       ;
-;      - fourcmp:inst1|results[0]~1 ; 1                 ; 6       ;
-;      - fourcmp:inst1|results[2]~5 ; 1                 ; 6       ;
-; sw[2]                             ;                   ;         ;
-;      - fourcmp:inst1|results~0    ; 0                 ; 6       ;
-;      - fourcmp:inst1|results[0]~1 ; 0                 ; 6       ;
-;      - fourcmp:inst1|results[2]~5 ; 0                 ; 6       ;
-; sw[0]                             ;                   ;         ;
-;      - fourcmp:inst1|results[0]~2 ; 1                 ; 6       ;
-;      - fourcmp:inst1|results[1]   ; 1                 ; 6       ;
-;      - fourcmp:inst1|results[2]~6 ; 1                 ; 6       ;
-; sw[4]                             ;                   ;         ;
-;      - fourcmp:inst1|results[0]~2 ; 0                 ; 6       ;
-;      - fourcmp:inst1|results[1]   ; 0                 ; 6       ;
-;      - fourcmp:inst1|results[2]~6 ; 0                 ; 6       ;
-; sw[1]                             ;                   ;         ;
-;      - fourcmp:inst1|results[0]~2 ; 1                 ; 0       ;
-;      - fourcmp:inst1|results~4    ; 1                 ; 0       ;
-;      - fourcmp:inst1|results[2]~6 ; 1                 ; 0       ;
-; sw[5]                             ;                   ;         ;
-;      - fourcmp:inst1|results[0]~2 ; 0                 ; 0       ;
-;      - fourcmp:inst1|results~4    ; 0                 ; 0       ;
-;      - fourcmp:inst1|results[2]~6 ; 0                 ; 0       ;
-+-----------------------------------+-------------------+---------+
++----------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                 ;
++----------------------------------+-------------------+---------+
+; Source Pin / Fanout              ; Pad To Core Index ; Setting ;
++----------------------------------+-------------------+---------+
+; clk_in                           ;                   ;         ;
+; pb[0]                            ;                   ;         ;
+; pb[1]                            ;                   ;         ;
+; pb[2]                            ;                   ;         ;
+; pb[3]                            ;                   ;         ;
+; sw[7]                            ;                   ;         ;
+;      - Compx4:inst1|results~0    ; 1                 ; 6       ;
+;      - Compx4:inst1|results[0]~1 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[2]~5 ; 1                 ; 6       ;
+; sw[6]                            ;                   ;         ;
+;      - Compx4:inst1|results~0    ; 0                 ; 6       ;
+;      - Compx4:inst1|results[0]~1 ; 0                 ; 6       ;
+;      - Compx4:inst1|results[2]~5 ; 0                 ; 6       ;
+; sw[3]                            ;                   ;         ;
+;      - Compx4:inst1|results~0    ; 1                 ; 6       ;
+;      - Compx4:inst1|results[0]~1 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[2]~5 ; 1                 ; 6       ;
+; sw[2]                            ;                   ;         ;
+;      - Compx4:inst1|results~0    ; 0                 ; 6       ;
+;      - Compx4:inst1|results[0]~1 ; 0                 ; 6       ;
+;      - Compx4:inst1|results[2]~5 ; 0                 ; 6       ;
+; sw[0]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~2 ; 1                 ; 6       ;
+;      - Compx4:inst1|results[1]   ; 1                 ; 6       ;
+;      - Compx4:inst1|results[2]~6 ; 1                 ; 6       ;
+; sw[4]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~2 ; 0                 ; 6       ;
+;      - Compx4:inst1|results[1]   ; 0                 ; 6       ;
+;      - Compx4:inst1|results[2]~6 ; 0                 ; 6       ;
+; sw[1]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~2 ; 1                 ; 0       ;
+;      - Compx4:inst1|results~4    ; 1                 ; 0       ;
+;      - Compx4:inst1|results[2]~6 ; 1                 ; 0       ;
+; sw[5]                            ;                   ;         ;
+;      - Compx4:inst1|results[0]~2 ; 0                 ; 0       ;
+;      - Compx4:inst1|results~4    ; 0                 ; 0       ;
+;      - Compx4:inst1|results[2]~6 ; 0                 ; 0       ;
++----------------------------------+-------------------+---------+
 
 
 +-----------------------------------------------+
@@ -1329,9 +1329,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file N:/ECE-125/Lab3/output_files/LogicalStep_Lab3_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5320 megabytes
-    Info: Processing ended: Mon Jul 13 17:07:11 2020
-    Info: Elapsed time: 00:00:25
+    Info: Peak virtual memory: 5318 megabytes
+    Info: Processing ended: Mon Jul 13 17:22:19 2020
+    Info: Elapsed time: 00:00:23
     Info: Total CPU time (on all processors): 00:00:05
 
 
