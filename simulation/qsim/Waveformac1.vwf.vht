@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "07/13/2020 21:09:24"
+-- Generated on "07/14/2020 15:10:19"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          LogicalStep_Lab3_top
 -- 
@@ -41,7 +41,7 @@ SIGNAL sw : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT LogicalStep_Lab3_top
 	PORT (
 	clk_in : IN STD_LOGIC;
-	leds : BUFFER STD_LOGIC_VECTOR(11 DOWNTO 0);
+	leds : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 	pb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	sw : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
@@ -120,7 +120,7 @@ END PROCESS t_prcs_sw_5;
 -- sw[4]
 t_prcs_sw_4: PROCESS
 BEGIN
-	sw(4) <= '1';
+	sw(4) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_4;
 

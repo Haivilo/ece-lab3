@@ -6,30 +6,30 @@ pb[2] => Tester:tst1.MC_TESTMODE
 pb[2] => controllerSteveNingzhi:ctrl1.test
 pb[3] => mux:mux1.mux_select
 pb[3] => controllerSteveNingzhi:ctrl1.vacation
-sw[0] => mux:mux1.hex_num1[0]
+sw[0] => mux:mux1.hex_num0[0]
 sw[0] => Tester:tst1.input1[0]
-sw[1] => mux:mux1.hex_num1[1]
+sw[1] => mux:mux1.hex_num0[1]
 sw[1] => Tester:tst1.input1[1]
-sw[2] => mux:mux1.hex_num1[2]
+sw[2] => mux:mux1.hex_num0[2]
 sw[2] => Tester:tst1.input1[2]
-sw[3] => mux:mux1.hex_num1[3]
+sw[3] => mux:mux1.hex_num0[3]
 sw[3] => Tester:tst1.input1[3]
-sw[4] => mux:mux1.hex_num0[0]
-sw[5] => mux:mux1.hex_num0[1]
-sw[6] => mux:mux1.hex_num0[2]
-sw[7] => mux:mux1.hex_num0[3]
-leds[0] << controllerSteveNingzhi:ctrl1.furnace
-leds[1] << controllerSteveNingzhi:ctrl1.at_temp
-leds[2] << controllerSteveNingzhi:ctrl1.ac
-leds[3] << controllerSteveNingzhi:ctrl1.blower
-leds[4] << controllerSteveNingzhi:ctrl1.windowOut
-leds[5] << controllerSteveNingzhi:ctrl1.doorOut
-leds[6] << Tester:tst1.TEST_PASS
-leds[7] << controllerSteveNingzhi:ctrl1.vacationOut
-leds[8] << HVAC:hvac1.temp[0]
-leds[9] << HVAC:hvac1.temp[1]
-leds[10] << HVAC:hvac1.temp[2]
-leds[11] << HVAC:hvac1.temp[3]
+sw[4] => mux:mux1.hex_num1[0]
+sw[5] => mux:mux1.hex_num1[1]
+sw[6] => mux:mux1.hex_num1[2]
+sw[7] => mux:mux1.hex_num1[3]
+leds[0] <= controllerSteveNingzhi:ctrl1.furnace
+leds[1] <= controllerSteveNingzhi:ctrl1.at_temp
+leds[2] <= controllerSteveNingzhi:ctrl1.ac
+leds[3] <= controllerSteveNingzhi:ctrl1.blower
+leds[4] <= controllerSteveNingzhi:ctrl1.windowOut
+leds[5] <= controllerSteveNingzhi:ctrl1.doorOut
+leds[6] <= Tester:tst1.TEST_PASS
+leds[7] <= controllerSteveNingzhi:ctrl1.vacationOut
+leds[8] <= HVAC:hvac1.temp[0]
+leds[9] <= HVAC:hvac1.temp[1]
+leds[10] <= HVAC:hvac1.temp[2]
+leds[11] <= HVAC:hvac1.temp[3]
 
 
 |LogicalStep_Lab3_top|mux:mux1
@@ -164,15 +164,15 @@ TEST_PASS <= TEST_PASS.DB_MAX_OUTPUT_PORT_TYPE
 
 |LogicalStep_Lab3_top|controllerSteveNingzhi:ctrl1
 vacation => vacationOut.DATAIN
-test => running.IN1
+test => running.IN0
+window => running.IN1
 window => windowOut.DATAIN
-window => running.IN0
-door => doorOut.DATAIN
 door => running.IN1
+door => doorOut.DATAIN
 cmp[0] => furnace.DATAIN
 cmp[0] => inc.DATAIN
-cmp[1] => at_temp.DATAIN
 cmp[1] => running.IN1
+cmp[1] => at_temp.DATAIN
 cmp[2] => ac.DATAIN
 cmp[2] => dec.DATAIN
 inc <= cmp[0].DB_MAX_OUTPUT_PORT_TYPE

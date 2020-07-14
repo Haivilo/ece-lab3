@@ -80,7 +80,7 @@ vaca_temp <= sw(7 downto 4);
 desired_temp <= sw(3 downto 0);
 
 --- get correct desired tmep
-mux1: mux port map( desired_temp,vaca_temp, vaca, mux_temp); 
+mux1: mux port map( vaca_temp, desired_temp, vaca, mux_temp); 
 --- process HVAC
 hvac1: HVAC port map(clk_in, run_n, inc, dec, cur_temp);
 --- compare the temp

@@ -18,7 +18,7 @@ signal hotter,colder, running	: std_logic;
  
 hotter <= cmp(0);
 colder <= cmp(2);
-running <= (NOT cmp(1)) AND (NOT window) AND (NOT door) AND (NOT test);
+running <= door OR test OR window or cmp(1);
 inc <= hotter;
 dec <= colder;
 run_n <= running;
