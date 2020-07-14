@@ -80,19 +80,18 @@ vaca_temp <= sw(7 downto 4);
 desired_temp <= sw(3 downto 0);
 
 --- get correct desired tmep
-mux1: mux port map(vaca_temp, desired_temp, vaca, mux_temp); 
+mux1: mux port map( desired_temp,vaca_temp, vaca, mux_temp); 
 --- process HVAC
 hvac1: HVAC port map(clk_in, run_n, inc, dec, cur_temp);
 --- compare the temp
 cmp1: Compx4 port map(mux_temp, cur_temp, cmpVal);
 --- run the tester
-tst1: Tester port map(test_m,cmpVal(1),cmpVal(0),cmpVal(2),mux_temp, cur_temp,leds(6) );
+tst1: Tester port map(test_m,cmpVal(1),cmpVal(0),cmpVal(2),desired_temp, cur_temp,leds(6) );
 --- run logic ctrler
 ctrl1: controllerSteveNingzhi port map(vaca, test_m, window, door, cmpVal, 
 inc, dec, run_n, 
 leds(0),leds(1),leds(2),leds(3),leds(4),leds(5),leds(7));
 leds(11 downto 8)<= cur_temp;
-
 end design;
 
 -- begin

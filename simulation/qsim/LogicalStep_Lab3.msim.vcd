@@ -3,7 +3,7 @@ $comment
 		vcd file LogicalStep_Lab3.msim.vcd -direction
 $end
 $date
-	Mon Jul 13 18:01:07 2020
+	Mon Jul 13 21:09:44 2020
 $end
 $version
 	ModelSim Version 10.5b
@@ -74,49 +74,80 @@ $var wire 1 X ww_leds [3] $end
 $var wire 1 Y ww_leds [2] $end
 $var wire 1 Z ww_leds [1] $end
 $var wire 1 [ ww_leds [0] $end
-$var wire 1 \ \clk_in~input_o\ $end
-$var wire 1 ] \pb[0]~input_o\ $end
-$var wire 1 ^ \pb[1]~input_o\ $end
-$var wire 1 _ \pb[2]~input_o\ $end
-$var wire 1 ` \pb[3]~input_o\ $end
-$var wire 1 a \leds[0]~output_o\ $end
-$var wire 1 b \leds[1]~output_o\ $end
-$var wire 1 c \leds[2]~output_o\ $end
-$var wire 1 d \leds[3]~output_o\ $end
-$var wire 1 e \leds[4]~output_o\ $end
-$var wire 1 f \leds[5]~output_o\ $end
-$var wire 1 g \leds[6]~output_o\ $end
-$var wire 1 h \leds[7]~output_o\ $end
-$var wire 1 i \leds[8]~output_o\ $end
-$var wire 1 j \leds[9]~output_o\ $end
-$var wire 1 k \leds[10]~output_o\ $end
-$var wire 1 l \leds[11]~output_o\ $end
-$var wire 1 m \sw[3]~input_o\ $end
-$var wire 1 n \sw[2]~input_o\ $end
-$var wire 1 o \sw[6]~input_o\ $end
-$var wire 1 p \sw[7]~input_o\ $end
-$var wire 1 q \inst1|results[0]~0_combout\ $end
-$var wire 1 r \sw[1]~input_o\ $end
-$var wire 1 s \sw[0]~input_o\ $end
-$var wire 1 t \sw[4]~input_o\ $end
-$var wire 1 u \sw[5]~input_o\ $end
-$var wire 1 v \inst1|results[0]~1_combout\ $end
-$var wire 1 w \inst1|results[0]~2_combout\ $end
-$var wire 1 x \inst1|results[0]~3_combout\ $end
-$var wire 1 y \inst1|results[1]~4_combout\ $end
-$var wire 1 z \inst1|results[2]~5_combout\ $end
-$var wire 1 { \inst1|results[2]~6_combout\ $end
-$var wire 1 | \inst1|results[2]~7_combout\ $end
-$var wire 1 } \inst1|results\ [2] $end
-$var wire 1 ~ \inst1|results\ [1] $end
-$var wire 1 !! \inst1|results\ [0] $end
-$var wire 1 "! \inst1|ALT_INV_results\ [1] $end
+$var wire 1 \ \leds[0]~output_o\ $end
+$var wire 1 ] \leds[1]~output_o\ $end
+$var wire 1 ^ \leds[2]~output_o\ $end
+$var wire 1 _ \leds[3]~output_o\ $end
+$var wire 1 ` \leds[4]~output_o\ $end
+$var wire 1 a \leds[5]~output_o\ $end
+$var wire 1 b \leds[6]~output_o\ $end
+$var wire 1 c \leds[7]~output_o\ $end
+$var wire 1 d \leds[8]~output_o\ $end
+$var wire 1 e \leds[9]~output_o\ $end
+$var wire 1 f \leds[10]~output_o\ $end
+$var wire 1 g \leds[11]~output_o\ $end
+$var wire 1 h \sw[3]~input_o\ $end
+$var wire 1 i \sw[7]~input_o\ $end
+$var wire 1 j \pb[3]~input_o\ $end
+$var wire 1 k \mux1|hex_out[3]~0_combout\ $end
+$var wire 1 l \sw[2]~input_o\ $end
+$var wire 1 m \sw[6]~input_o\ $end
+$var wire 1 n \mux1|hex_out[2]~1_combout\ $end
+$var wire 1 o \clk_in~input_o\ $end
+$var wire 1 p \hvac1|counter:cnt[1]~4\ $end
+$var wire 1 q \hvac1|counter:cnt[2]~2\ $end
+$var wire 1 r \hvac1|counter:cnt[3]~1_combout\ $end
+$var wire 1 s \pb[0]~input_o\ $end
+$var wire 1 t \pb[1]~input_o\ $end
+$var wire 1 u \pb[2]~input_o\ $end
+$var wire 1 v \ctrl1|blower~0_combout\ $end
+$var wire 1 w \sw[5]~input_o\ $end
+$var wire 1 x \sw[1]~input_o\ $end
+$var wire 1 y \cmp1|inst3|sout~0_combout\ $end
+$var wire 1 z \sw[0]~input_o\ $end
+$var wire 1 { \sw[4]~input_o\ $end
+$var wire 1 | \mux1|hex_out[0]~3_combout\ $end
+$var wire 1 } \cmp1|results[0]~2_combout\ $end
+$var wire 1 ~ \cmp1|results[1]~4_combout\ $end
+$var wire 1 !! \hvac1|counter:cnt[2]~5_combout\ $end
+$var wire 1 "! \hvac1|counter:cnt[3]~q\ $end
+$var wire 1 #! \hvac1|counter:cnt[2]~3_combout\ $end
+$var wire 1 $! \cmp1|results[2]~5_combout\ $end
+$var wire 1 %! \mux1|hex_out[1]~2_combout\ $end
+$var wire 1 &! \cmp1|results[2]~6_combout\ $end
+$var wire 1 '! \hvac1|counter:cnt[2]~4_combout\ $end
+$var wire 1 (! \ctrl1|blower~combout\ $end
+$var wire 1 )! \hvac1|counter:cnt[0]~0_combout\ $end
+$var wire 1 *! \hvac1|counter:cnt[0]~q\ $end
+$var wire 1 +! \hvac1|counter:cnt[1]~2_cout\ $end
+$var wire 1 ,! \hvac1|counter:cnt[1]~3_combout\ $end
+$var wire 1 -! \hvac1|counter:cnt[1]~q\ $end
+$var wire 1 .! \hvac1|counter~0_combout\ $end
+$var wire 1 /! \cmp1|results[0]~1_combout\ $end
+$var wire 1 0! \hvac1|counter~1_combout\ $end
+$var wire 1 1! \hvac1|counter:cnt[2]~1_combout\ $end
+$var wire 1 2! \hvac1|counter:cnt[2]~q\ $end
+$var wire 1 3! \cmp1|results[0]~0_combout\ $end
+$var wire 1 4! \cmp1|results[0]~3_combout\ $end
+$var wire 1 5! \cmp1|results[2]~7_combout\ $end
+$var wire 1 6! \tst1|TEST_PASS~0_combout\ $end
+$var wire 1 7! \tst1|TEST_PASS~1_combout\ $end
+$var wire 1 8! \tst1|TEST_PASS~2_combout\ $end
+$var wire 1 9! \tst1|TEST_PASS~3_combout\ $end
+$var wire 1 :! \tst1|TEST_PASS~4_combout\ $end
+$var wire 1 ;! \tst1|TEST_PASS~5_combout\ $end
+$var wire 1 <! \tst1|TEST_PASS~6_combout\ $end
+$var wire 1 =! \tst1|TEST_PASS~7_combout\ $end
+$var wire 1 >! \tst1|TEST_PASS~8_combout\ $end
+$var wire 1 ?! \tst1|TEST_PASS~9_combout\ $end
+$var wire 1 @! \ctrl1|ALT_INV_blower~combout\ $end
+$var wire 1 A! \cmp1|ALT_INV_results[1]~4_combout\ $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-x!
+0!
 0:
 1;
 x<
@@ -126,44 +157,83 @@ x<
 1@
 1A
 1B
-xC
-x\
-x]
-x^
-x_
-x`
-1a
+0C
+1\
+0]
+0^
+1_
+0`
+0a
 0b
 0c
 0d
 0e
 0f
 0g
-0h
-0i
+1h
+1i
 0j
-0k
-0l
+1k
+1l
 1m
 1n
 0o
-0p
-1q
+1p
+0q
 0r
 0s
 0t
 0u
 0v
-0w
-1x
-0y
+1w
+0x
+1y
 0z
-0{
-0|
-02
-03
-04
-05
+1{
+1|
+0}
+1~
+0!!
+0"!
+0#!
+0$!
+1%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+1.!
+1/!
+10!
+01!
+02!
+13!
+14!
+05!
+06!
+07!
+08!
+09!
+1:!
+1;!
+0<!
+1=!
+0>!
+0?!
+1@!
+0A!
+0.
+0/
+00
+01
+12
+13
+14
+15
 16
 17
 08
@@ -176,18 +246,18 @@ x`
 0'
 0(
 0)
-0*
+1*
 0+
 0,
 1-
-xD
-xE
-xF
-xG
-0H
-0I
-0J
-0K
+0D
+0E
+0F
+0G
+1H
+1I
+1J
+1K
 1L
 1M
 0N
@@ -200,144 +270,805 @@ xG
 0U
 0V
 0W
-0X
+1X
 0Y
 0Z
 1[
-x}
-1~
-x!!
-0"!
-x.
-x/
-x0
-x1
 $end
-#62500
-15
-1K
-1t
-1y
-1{
-#125000
-05
-14
-0K
-1J
-1u
-0t
-#187500
-15
-1K
-1t
-#250000
-05
-04
-13
-0K
-0J
-1I
+#5000
+1!
+1C
 1o
-0u
-0t
-0y
-0{
-#312500
-15
-1K
-1t
-1y
-1{
-#375000
-05
-14
-0K
-1J
-1u
-0t
-#437500
-15
-1K
-1t
-#500000
-05
-04
-03
-12
-0K
-0J
-0I
-1H
-1p
+#10000
+0!
+0C
 0o
-0u
-0t
-0y
-0{
-#562500
-15
-1K
-1t
-1y
-1{
-#625000
-05
-14
-0K
-1J
-1u
-0t
-#687500
-15
-1K
-1t
-#750000
-05
-04
-13
-0K
-0J
-1I
+#15000
+1!
+1C
 1o
-0u
-0t
-0y
-0{
-0q
-1w
-0x
-0~
-1"!
-0a
-1b
-0[
-1Z
-0-
-1,
-#812500
-15
-1K
-1t
-1y
-1{
-1|
-1~
-0"!
-1c
-0b
-1Y
-0Z
-1+
-0,
+#20000
+0!
+0C
+0o
+#25000
+1!
+1C
+1o
+#30000
+0!
+0C
+0o
+#35000
+1!
+1C
+1o
+#40000
+0!
+0C
+0o
+#45000
+1!
+1C
+1o
+#50000
+0!
+0C
+0o
+#55000
+1!
+1C
+1o
+#60000
+0!
+0C
+0o
+#65000
+1!
+1C
+1o
+#70000
+0!
+0C
+0o
+#75000
+1!
+1C
+1o
+#80000
+0!
+0C
+0o
+#85000
+1!
+1C
+1o
+#90000
+0!
+0C
+0o
+#95000
+1!
+1C
+1o
+#100000
+0!
+0C
+0o
+#105000
+1!
+1C
+1o
+#110000
+0!
+0C
+0o
+#115000
+1!
+1C
+1o
+#120000
+0!
+0C
+0o
+#125000
+1!
+1C
+1o
+#130000
+0!
+0C
+0o
+#135000
+1!
+1C
+1o
+#140000
+0!
+0C
+0o
+#145000
+1!
+1C
+1o
+#150000
+0!
+0C
+0o
+#155000
+1!
+1C
+1o
+#160000
+0!
+0C
+0o
+#165000
+1!
+1C
+1o
+#170000
+0!
+0C
+0o
+#175000
+1!
+1C
+1o
+#180000
+0!
+0C
+0o
+#185000
+1!
+1C
+1o
+#190000
+0!
+0C
+0o
+#195000
+1!
+1C
+1o
+#200000
+0!
+0C
+0o
+#205000
+1!
+1C
+1o
+#210000
+0!
+0C
+0o
+#215000
+1!
+1C
+1o
+#220000
+0!
+0C
+0o
+#225000
+1!
+1C
+1o
+#230000
+0!
+0C
+0o
+#235000
+1!
+1C
+1o
+#240000
+0!
+0C
+0o
+#245000
+1!
+1C
+1o
+#250000
+0!
+0C
+0o
+#255000
+1!
+1C
+1o
+#260000
+0!
+0C
+0o
+#265000
+1!
+1C
+1o
+#270000
+0!
+0C
+0o
+#275000
+1!
+1C
+1o
+#280000
+0!
+0C
+0o
+#285000
+1!
+1C
+1o
+#290000
+0!
+0C
+0o
+#295000
+1!
+1C
+1o
+#300000
+0!
+0C
+0o
+#305000
+1!
+1C
+1o
+#310000
+0!
+0C
+0o
+#315000
+1!
+1C
+1o
+#320000
+0!
+0C
+0o
+#325000
+1!
+1C
+1o
+#330000
+0!
+0C
+0o
+#335000
+1!
+1C
+1o
+#340000
+0!
+0C
+0o
+#345000
+1!
+1C
+1o
+#350000
+0!
+0C
+0o
+#355000
+1!
+1C
+1o
+#360000
+0!
+0C
+0o
+#365000
+1!
+1C
+1o
+#370000
+0!
+0C
+0o
+#375000
+1!
+1C
+1o
+#380000
+0!
+0C
+0o
+#385000
+1!
+1C
+1o
+#390000
+0!
+0C
+0o
+#395000
+1!
+1C
+1o
+#400000
+0!
+0C
+0o
+#405000
+1!
+1C
+1o
+#410000
+0!
+0C
+0o
+#415000
+1!
+1C
+1o
+#420000
+0!
+0C
+0o
+#425000
+1!
+1C
+1o
+#430000
+0!
+0C
+0o
+#435000
+1!
+1C
+1o
+#440000
+0!
+0C
+0o
+#445000
+1!
+1C
+1o
+#450000
+0!
+0C
+0o
+#455000
+1!
+1C
+1o
+#460000
+0!
+0C
+0o
+#465000
+1!
+1C
+1o
+#470000
+0!
+0C
+0o
+#475000
+1!
+1C
+1o
+#480000
+0!
+0C
+0o
+#485000
+1!
+1C
+1o
+#490000
+0!
+0C
+0o
+#495000
+1!
+1C
+1o
+#500000
+0!
+0C
+0o
+#505000
+1!
+1C
+1o
+#510000
+0!
+0C
+0o
+#515000
+1!
+1C
+1o
+#520000
+0!
+0C
+0o
+#525000
+1!
+1C
+1o
+#530000
+0!
+0C
+0o
+#535000
+1!
+1C
+1o
+#540000
+0!
+0C
+0o
+#545000
+1!
+1C
+1o
+#550000
+0!
+0C
+0o
+#555000
+1!
+1C
+1o
+#560000
+0!
+0C
+0o
+#565000
+1!
+1C
+1o
+#570000
+0!
+0C
+0o
+#575000
+1!
+1C
+1o
+#580000
+0!
+0C
+0o
+#585000
+1!
+1C
+1o
+#590000
+0!
+0C
+0o
+#595000
+1!
+1C
+1o
+#600000
+0!
+0C
+0o
+#605000
+1!
+1C
+1o
+#610000
+0!
+0C
+0o
+#615000
+1!
+1C
+1o
+#620000
+0!
+0C
+0o
+#625000
+1!
+1C
+1o
+#630000
+0!
+0C
+0o
+#635000
+1!
+1C
+1o
+#640000
+0!
+0C
+0o
+#645000
+1!
+1C
+1o
+#650000
+0!
+0C
+0o
+#655000
+1!
+1C
+1o
+#660000
+0!
+0C
+0o
+#665000
+1!
+1C
+1o
+#670000
+0!
+0C
+0o
+#675000
+1!
+1C
+1o
+#680000
+0!
+0C
+0o
+#685000
+1!
+1C
+1o
+#690000
+0!
+0C
+0o
+#695000
+1!
+1C
+1o
+#700000
+0!
+0C
+0o
+#705000
+1!
+1C
+1o
+#710000
+0!
+0C
+0o
+#715000
+1!
+1C
+1o
+#720000
+0!
+0C
+0o
+#725000
+1!
+1C
+1o
+#730000
+0!
+0C
+0o
+#735000
+1!
+1C
+1o
+#740000
+0!
+0C
+0o
+#745000
+1!
+1C
+1o
+#750000
+0!
+0C
+0o
+#755000
+1!
+1C
+1o
+#760000
+0!
+0C
+0o
+#765000
+1!
+1C
+1o
+#770000
+0!
+0C
+0o
+#775000
+1!
+1C
+1o
+#780000
+0!
+0C
+0o
+#785000
+1!
+1C
+1o
+#790000
+0!
+0C
+0o
+#795000
+1!
+1C
+1o
+#800000
+0!
+0C
+0o
+#805000
+1!
+1C
+1o
+#810000
+0!
+0C
+0o
+#815000
+1!
+1C
+1o
+#820000
+0!
+0C
+0o
+#825000
+1!
+1C
+1o
+#830000
+0!
+0C
+0o
+#835000
+1!
+1C
+1o
+#840000
+0!
+0C
+0o
+#845000
+1!
+1C
+1o
+#850000
+0!
+0C
+0o
+#855000
+1!
+1C
+1o
+#860000
+0!
+0C
+0o
+#865000
+1!
+1C
+1o
+#870000
+0!
+0C
+0o
 #875000
-05
-14
-0K
-1J
-1u
-0t
-#937500
-15
-1K
-1t
+1!
+1C
+1o
+#880000
+0!
+0C
+0o
+#885000
+1!
+1C
+1o
+#890000
+0!
+0C
+0o
+#895000
+1!
+1C
+1o
+#900000
+0!
+0C
+0o
+#905000
+1!
+1C
+1o
+#910000
+0!
+0C
+0o
+#915000
+1!
+1C
+1o
+#920000
+0!
+0C
+0o
+#925000
+1!
+1C
+1o
+#930000
+0!
+0C
+0o
+#935000
+1!
+1C
+1o
+#940000
+0!
+0C
+0o
+#945000
+1!
+1C
+1o
+#950000
+0!
+0C
+0o
+#955000
+1!
+1C
+1o
+#960000
+0!
+0C
+0o
+#965000
+1!
+1C
+1o
+#970000
+0!
+0C
+0o
+#975000
+1!
+1C
+1o
+#980000
+0!
+0C
+0o
+#985000
+1!
+1C
+1o
+#990000
+0!
+0C
+0o
+#995000
+1!
+1C
+1o
 #1000000

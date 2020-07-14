@@ -1,5 +1,5 @@
 Flow report for LogicalStep_Lab3_top
-Mon Jul 13 20:22:05 2020
+Mon Jul 13 21:09:41 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Jul 13 20:22:04 2020       ;
+; Flow Status                        ; Successful - Mon Jul 13 21:09:41 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; LogicalStep_Lab3_top                        ;
 ; Top-level Entity Name              ; LogicalStep_Lab3_top                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08DAF484C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 26                                          ;
-;     Total combinational functions  ; 26                                          ;
+; Total logic elements               ; 35                                          ;
+;     Total combinational functions  ; 35                                          ;
 ;     Dedicated logic registers      ; 4                                           ;
 ; Total registers                    ; 4                                           ;
 ; Total pins                         ; 25                                          ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 07/13/2020 20:21:52  ;
+; Start date & time ; 07/13/2020 21:08:17  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; LogicalStep_Lab3_top ;
 +-------------------+----------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 163580558468427.159468611213828        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 163580558468427.159468889711288        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,8 +95,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4791 MB             ; 00:00:19                           ;
-; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 4791 MB             ; 00:00:19                           ;
+; EDA Netlist Writer   ; 00:00:16     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:16     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
+; Total                ; 00:00:58     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,6 +108,8 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; ECE-FPGA1        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; ECE-FPGA1        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; ECE-FPGA1        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -113,6 +117,8 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=N:/ECE-125/Lab3/Waveformac1.vwf --testbench_file=N:/ECE-125/Lab3/simulation/qsim/Waveformac1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=N:/ECE-125/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
 
 
 
