@@ -1,32 +1,70 @@
 |LogicalStep_Lab3_top
-clk_in => ~NO_FANOUT~
-pb[0] => ~NO_FANOUT~
-pb[1] => ~NO_FANOUT~
-pb[2] => ~NO_FANOUT~
-pb[3] => ~NO_FANOUT~
-sw[0] => Compx4:inst1.inputA[0]
-sw[1] => Compx4:inst1.inputA[1]
-sw[2] => Compx4:inst1.inputA[2]
-sw[3] => Compx4:inst1.inputA[3]
-sw[4] => Compx4:inst1.inputB[0]
-sw[5] => Compx4:inst1.inputB[1]
-sw[6] => Compx4:inst1.inputB[2]
-sw[7] => Compx4:inst1.inputB[3]
-leds[0] << Compx4:inst1.results[0]
-leds[1] << Compx4:inst1.results[1]
-leds[2] << Compx4:inst1.results[2]
-leds[3] << <GND>
-leds[4] << <GND>
-leds[5] << <GND>
-leds[6] << <GND>
-leds[7] << <GND>
-leds[8] << <GND>
-leds[9] << <GND>
-leds[10] << <GND>
-leds[11] << <GND>
+clk_in => HVAC:hvac1.clk
+pb[0] => controllerSteveNingzhi:ctrl1.door
+pb[1] => controllerSteveNingzhi:ctrl1.window
+pb[2] => Tester:tst1.MC_TESTMODE
+pb[2] => controllerSteveNingzhi:ctrl1.test
+pb[3] => mux:mux1.mux_select
+pb[3] => controllerSteveNingzhi:ctrl1.vacation
+sw[0] => mux:mux1.hex_num0[0]
+sw[1] => mux:mux1.hex_num0[1]
+sw[2] => mux:mux1.hex_num0[2]
+sw[3] => mux:mux1.hex_num0[3]
+sw[4] => mux:mux1.hex_num1[0]
+sw[5] => mux:mux1.hex_num1[1]
+sw[6] => mux:mux1.hex_num1[2]
+sw[7] => mux:mux1.hex_num1[3]
+leds[0] << controllerSteveNingzhi:ctrl1.furnace
+leds[1] << controllerSteveNingzhi:ctrl1.at_temp
+leds[2] << controllerSteveNingzhi:ctrl1.ac
+leds[3] << controllerSteveNingzhi:ctrl1.blower
+leds[4] << controllerSteveNingzhi:ctrl1.windowOut
+leds[5] << controllerSteveNingzhi:ctrl1.doorOut
+leds[6] << Tester:tst1.TEST_PASS
+leds[7] << controllerSteveNingzhi:ctrl1.vacationOut
+leds[8] << HVAC:hvac1.temp[0]
+leds[9] << HVAC:hvac1.temp[1]
+leds[10] << HVAC:hvac1.temp[2]
+leds[11] << HVAC:hvac1.temp[3]
 
 
-|LogicalStep_Lab3_top|Compx4:inst1
+|LogicalStep_Lab3_top|mux:mux1
+hex_num1[0] => hex_out.DATAA
+hex_num1[1] => hex_out.DATAA
+hex_num1[2] => hex_out.DATAA
+hex_num1[3] => hex_out.DATAA
+hex_num0[0] => hex_out.DATAB
+hex_num0[1] => hex_out.DATAB
+hex_num0[2] => hex_out.DATAB
+hex_num0[3] => hex_out.DATAB
+mux_select => hex_out.OUTPUTSELECT
+mux_select => hex_out.OUTPUTSELECT
+mux_select => hex_out.OUTPUTSELECT
+mux_select => hex_out.OUTPUTSELECT
+hex_out[0] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[1] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[2] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[3] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|HVAC:hvac1
+clk => \counter:cnt[0].CLK
+clk => \counter:cnt[1].CLK
+clk => \counter:cnt[2].CLK
+clk => \counter:cnt[3].CLK
+run_n => \counter:cnt[0].ENA
+run_n => \counter:cnt[1].ENA
+run_n => \counter:cnt[2].ENA
+run_n => \counter:cnt[3].ENA
+increase => counter.IN1
+decrease => counter.IN1
+temp[0] <= \counter:cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+temp[1] <= \counter:cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+temp[2] <= \counter:cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+temp[3] <= \counter:cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:cmp1
 inputA[0] => singlecmp:inst4.A
 inputA[1] => singlecmp:inst3.A
 inputA[2] => singlecmp:inst2.A
@@ -40,7 +78,7 @@ results[1] <= results.DB_MAX_OUTPUT_PORT_TYPE
 results[2] <= results.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|Compx4:inst1|singlecmp:inst1
+|LogicalStep_Lab3_top|Compx4:cmp1|singlecmp:inst1
 A => sout.IN0
 A => sout.IN0
 A => sout.IN0
@@ -52,7 +90,7 @@ sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|Compx4:inst1|singlecmp:inst2
+|LogicalStep_Lab3_top|Compx4:cmp1|singlecmp:inst2
 A => sout.IN0
 A => sout.IN0
 A => sout.IN0
@@ -64,7 +102,7 @@ sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|Compx4:inst1|singlecmp:inst3
+|LogicalStep_Lab3_top|Compx4:cmp1|singlecmp:inst3
 A => sout.IN0
 A => sout.IN0
 A => sout.IN0
@@ -76,7 +114,7 @@ sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|Compx4:inst1|singlecmp:inst4
+|LogicalStep_Lab3_top|Compx4:cmp1|singlecmp:inst4
 A => sout.IN0
 A => sout.IN0
 A => sout.IN0
@@ -86,5 +124,62 @@ B => sout.IN1
 sout[0] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 sout[1] <= sout.DB_MAX_OUTPUT_PORT_TYPE
 sout[2] <= sout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Tester:tst1
+MC_TESTMODE => TEST_PASS.IN1
+I1EQI2 => \Tester1:EQ_PASS.IN1
+I1GTI2 => Tester1.IN1
+I1LTI2 => Tester1.IN1
+input1[0] => Equal0.IN3
+input1[0] => LessThan0.IN4
+input1[0] => LessThan1.IN4
+input1[1] => Equal0.IN2
+input1[1] => LessThan0.IN3
+input1[1] => LessThan1.IN3
+input1[2] => Equal0.IN1
+input1[2] => LessThan0.IN2
+input1[2] => LessThan1.IN2
+input1[3] => Equal0.IN0
+input1[3] => LessThan0.IN1
+input1[3] => LessThan1.IN1
+input2[0] => Equal0.IN7
+input2[0] => LessThan0.IN8
+input2[0] => LessThan1.IN8
+input2[1] => Equal0.IN6
+input2[1] => LessThan0.IN7
+input2[1] => LessThan1.IN7
+input2[2] => Equal0.IN5
+input2[2] => LessThan0.IN6
+input2[2] => LessThan1.IN6
+input2[3] => Equal0.IN4
+input2[3] => LessThan0.IN5
+input2[3] => LessThan1.IN5
+TEST_PASS <= TEST_PASS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|controllerSteveNingzhi:ctrl1
+vacation => vacationOut.DATAIN
+test => running.IN1
+window => windowOut.DATAIN
+window => running.IN0
+door => doorOut.DATAIN
+door => running.IN1
+cmp[0] => furnace.DATAIN
+cmp[0] => inc.DATAIN
+cmp[1] => at_temp.DATAIN
+cmp[1] => running.IN1
+cmp[2] => ac.DATAIN
+cmp[2] => dec.DATAIN
+inc <= cmp[0].DB_MAX_OUTPUT_PORT_TYPE
+dec <= cmp[2].DB_MAX_OUTPUT_PORT_TYPE
+run_n <= running.DB_MAX_OUTPUT_PORT_TYPE
+furnace <= cmp[0].DB_MAX_OUTPUT_PORT_TYPE
+at_temp <= cmp[1].DB_MAX_OUTPUT_PORT_TYPE
+ac <= cmp[2].DB_MAX_OUTPUT_PORT_TYPE
+blower <= running.DB_MAX_OUTPUT_PORT_TYPE
+windowOut <= window.DB_MAX_OUTPUT_PORT_TYPE
+doorOut <= door.DB_MAX_OUTPUT_PORT_TYPE
+vacationOut <= vacation.DB_MAX_OUTPUT_PORT_TYPE
 
 
