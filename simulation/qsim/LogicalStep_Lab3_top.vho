@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
 
--- DATE "07/14/2020 15:10:36"
+-- DATE "07/14/2020 16:23:06"
 
 -- 
 -- Device: Altera 10M08DAF484C8G Package FBGA484
@@ -93,7 +93,7 @@ ENTITY 	LogicalStep_Lab3_top IS
 	clk_in : IN std_logic;
 	pb : IN std_logic_vector(3 DOWNTO 0);
 	sw : IN std_logic_vector(7 DOWNTO 0);
-	leds : OUT std_logic_vector(11 DOWNTO 0)
+	leds : BUFFER std_logic_vector(11 DOWNTO 0)
 	);
 END LogicalStep_Lab3_top;
 
@@ -176,7 +176,7 @@ SIGNAL \hvac1|counter:cnt[1]~3_combout\ : std_logic;
 SIGNAL \pb[0]~input_o\ : std_logic;
 SIGNAL \pb[1]~input_o\ : std_logic;
 SIGNAL \pb[2]~input_o\ : std_logic;
-SIGNAL \ctrl1|blower~0_combout\ : std_logic;
+SIGNAL \ctrl1|run_n~0_combout\ : std_logic;
 SIGNAL \cmp1|inst3|sout~0_combout\ : std_logic;
 SIGNAL \cmp1|results[1]~4_combout\ : std_logic;
 SIGNAL \hvac1|counter:cnt[2]~3_combout\ : std_logic;
@@ -195,7 +195,7 @@ SIGNAL \cmp1|results[0]~2_combout\ : std_logic;
 SIGNAL \cmp1|results[0]~0_combout\ : std_logic;
 SIGNAL \hvac1|counter~0_combout\ : std_logic;
 SIGNAL \hvac1|counter~1_combout\ : std_logic;
-SIGNAL \ctrl1|blower~combout\ : std_logic;
+SIGNAL \ctrl1|run_n~combout\ : std_logic;
 SIGNAL \hvac1|counter:cnt[0]~0_combout\ : std_logic;
 SIGNAL \hvac1|counter:cnt[0]~q\ : std_logic;
 SIGNAL \cmp1|results[0]~1_combout\ : std_logic;
@@ -211,6 +211,7 @@ SIGNAL \tst1|TEST_PASS~7_combout\ : std_logic;
 SIGNAL \tst1|TEST_PASS~6_combout\ : std_logic;
 SIGNAL \tst1|TEST_PASS~8_combout\ : std_logic;
 SIGNAL \tst1|TEST_PASS~9_combout\ : std_logic;
+SIGNAL \ctrl1|ALT_INV_run_n~combout\ : std_logic;
 SIGNAL \cmp1|ALT_INV_results[1]~4_combout\ : std_logic;
 
 COMPONENT hard_block
@@ -233,6 +234,7 @@ ww_devpor <= devpor;
 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ <= (\~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\);
 
 \clk_in~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clk_in~input_o\);
+\ctrl1|ALT_INV_run_n~combout\ <= NOT \ctrl1|run_n~combout\;
 \cmp1|ALT_INV_results[1]~4_combout\ <= NOT \cmp1|results[1]~4_combout\;
 auto_generated_inst : hard_block
 PORT MAP (
@@ -297,7 +299,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \ctrl1|blower~combout\,
+	i => \ctrl1|ALT_INV_run_n~combout\,
 	devoe => ww_devoe,
 	o => \leds[3]~output_o\);
 
@@ -666,9 +668,9 @@ PORT MAP (
 	o => \pb[2]~input_o\);
 
 -- Location: LCCOMB_X17_Y23_N28
-\ctrl1|blower~0\ : fiftyfivenm_lcell_comb
+\ctrl1|run_n~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \ctrl1|blower~0_combout\ = (\pb[0]~input_o\) # ((\pb[1]~input_o\) # (\pb[2]~input_o\))
+-- \ctrl1|run_n~0_combout\ = (\pb[0]~input_o\) # ((\pb[1]~input_o\) # (\pb[2]~input_o\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -679,7 +681,7 @@ PORT MAP (
 	dataa => \pb[0]~input_o\,
 	datac => \pb[1]~input_o\,
 	datad => \pb[2]~input_o\,
-	combout => \ctrl1|blower~0_combout\);
+	combout => \ctrl1|run_n~0_combout\);
 
 -- Location: LCCOMB_X16_Y23_N28
 \cmp1|inst3|sout~0\ : fiftyfivenm_lcell_comb
@@ -788,7 +790,7 @@ PORT MAP (
 -- Location: LCCOMB_X16_Y23_N26
 \hvac1|counter:cnt[2]~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \hvac1|counter:cnt[2]~5_combout\ = (!\ctrl1|blower~0_combout\ & (\cmp1|results[1]~4_combout\ & ((\hvac1|counter~1_combout\) # (\hvac1|counter:cnt[2]~4_combout\))))
+-- \hvac1|counter:cnt[2]~5_combout\ = (!\ctrl1|run_n~0_combout\ & (\cmp1|results[1]~4_combout\ & ((\hvac1|counter~1_combout\) # (\hvac1|counter:cnt[2]~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -797,7 +799,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \hvac1|counter~1_combout\,
-	datab => \ctrl1|blower~0_combout\,
+	datab => \ctrl1|run_n~0_combout\,
 	datac => \cmp1|results[1]~4_combout\,
 	datad => \hvac1|counter:cnt[2]~4_combout\,
 	combout => \hvac1|counter:cnt[2]~5_combout\);
@@ -953,9 +955,9 @@ PORT MAP (
 	combout => \hvac1|counter~1_combout\);
 
 -- Location: LCCOMB_X17_Y23_N2
-\ctrl1|blower\ : fiftyfivenm_lcell_comb
+\ctrl1|run_n\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \ctrl1|blower~combout\ = (\pb[0]~input_o\) # ((\pb[2]~input_o\) # ((\pb[1]~input_o\) # (!\cmp1|results[1]~4_combout\)))
+-- \ctrl1|run_n~combout\ = (\pb[0]~input_o\) # ((\pb[2]~input_o\) # ((\pb[1]~input_o\) # (!\cmp1|results[1]~4_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -967,12 +969,12 @@ PORT MAP (
 	datab => \pb[2]~input_o\,
 	datac => \pb[1]~input_o\,
 	datad => \cmp1|results[1]~4_combout\,
-	combout => \ctrl1|blower~combout\);
+	combout => \ctrl1|run_n~combout\);
 
 -- Location: LCCOMB_X16_Y23_N30
 \hvac1|counter:cnt[0]~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \hvac1|counter:cnt[0]~0_combout\ = \hvac1|counter:cnt[0]~q\ $ (((!\ctrl1|blower~combout\ & ((\hvac1|counter~1_combout\) # (\hvac1|counter:cnt[2]~4_combout\)))))
+-- \hvac1|counter:cnt[0]~0_combout\ = \hvac1|counter:cnt[0]~q\ $ (((!\ctrl1|run_n~combout\ & ((\hvac1|counter~1_combout\) # (\hvac1|counter:cnt[2]~4_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -983,7 +985,7 @@ PORT MAP (
 	dataa => \hvac1|counter~1_combout\,
 	datab => \hvac1|counter:cnt[2]~4_combout\,
 	datac => \hvac1|counter:cnt[0]~q\,
-	datad => \ctrl1|blower~combout\,
+	datad => \ctrl1|run_n~combout\,
 	combout => \hvac1|counter:cnt[0]~0_combout\);
 
 -- Location: FF_X16_Y23_N31

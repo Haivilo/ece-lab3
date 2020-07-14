@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "07/14/2020 15:10:19"
+-- Generated on "07/14/2020 16:12:49"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          LogicalStep_Lab3_top
 -- 
@@ -41,7 +41,7 @@ SIGNAL sw : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT LogicalStep_Lab3_top
 	PORT (
 	clk_in : IN STD_LOGIC;
-	leds : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+	leds : BUFFER STD_LOGIC_VECTOR(11 DOWNTO 0);
 	pb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	sw : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
@@ -85,42 +85,42 @@ END PROCESS t_prcs_sw_2;
 -- sw[1]
 t_prcs_sw_1: PROCESS
 BEGIN
-	sw(1) <= '0';
+	sw(1) <= '1';
 WAIT;
 END PROCESS t_prcs_sw_1;
 
 -- sw[0]
 t_prcs_sw_0: PROCESS
 BEGIN
-	sw(0) <= '0';
+	sw(0) <= '1';
 WAIT;
 END PROCESS t_prcs_sw_0;
 
 -- sw[7]
 t_prcs_sw_7: PROCESS
 BEGIN
-	sw(7) <= '1';
+	sw(7) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_7;
 
 -- sw[6]
 t_prcs_sw_6: PROCESS
 BEGIN
-	sw(6) <= '1';
+	sw(6) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_6;
 
 -- sw[5]
 t_prcs_sw_5: PROCESS
 BEGIN
-	sw(5) <= '1';
+	sw(5) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_5;
 
 -- sw[4]
 t_prcs_sw_4: PROCESS
 BEGIN
-	sw(4) <= '0';
+	sw(4) <= '1';
 WAIT;
 END PROCESS t_prcs_sw_4;
 
@@ -148,6 +148,13 @@ END PROCESS t_prcs_pb_2;
 -- pb[3]
 t_prcs_pb_3: PROCESS
 BEGIN
+	FOR i IN 1 TO 2
+	LOOP
+		pb(3) <= '0';
+		WAIT FOR 200000 ps;
+		pb(3) <= '1';
+		WAIT FOR 200000 ps;
+	END LOOP;
 	pb(3) <= '0';
 WAIT;
 END PROCESS t_prcs_pb_3;

@@ -18,18 +18,18 @@ sw[4] => mux:mux1.hex_num1[0]
 sw[5] => mux:mux1.hex_num1[1]
 sw[6] => mux:mux1.hex_num1[2]
 sw[7] => mux:mux1.hex_num1[3]
-leds[0] <= controllerSteveNingzhi:ctrl1.furnace
-leds[1] <= controllerSteveNingzhi:ctrl1.at_temp
-leds[2] <= controllerSteveNingzhi:ctrl1.ac
-leds[3] <= controllerSteveNingzhi:ctrl1.blower
-leds[4] <= controllerSteveNingzhi:ctrl1.windowOut
-leds[5] <= controllerSteveNingzhi:ctrl1.doorOut
-leds[6] <= Tester:tst1.TEST_PASS
-leds[7] <= controllerSteveNingzhi:ctrl1.vacationOut
-leds[8] <= HVAC:hvac1.temp[0]
-leds[9] <= HVAC:hvac1.temp[1]
-leds[10] <= HVAC:hvac1.temp[2]
-leds[11] <= HVAC:hvac1.temp[3]
+leds[0] << controllerSteveNingzhi:ctrl1.furnace
+leds[1] << controllerSteveNingzhi:ctrl1.at_temp
+leds[2] << controllerSteveNingzhi:ctrl1.ac
+leds[3] << controllerSteveNingzhi:ctrl1.blower
+leds[4] << controllerSteveNingzhi:ctrl1.windowOut
+leds[5] << controllerSteveNingzhi:ctrl1.doorOut
+leds[6] << Tester:tst1.TEST_PASS
+leds[7] << controllerSteveNingzhi:ctrl1.vacationOut
+leds[8] << HVAC:hvac1.temp[0]
+leds[9] << HVAC:hvac1.temp[1]
+leds[10] << HVAC:hvac1.temp[2]
+leds[11] << HVAC:hvac1.temp[3]
 
 
 |LogicalStep_Lab3_top|mux:mux1

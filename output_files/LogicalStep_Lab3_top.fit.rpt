@@ -1,5 +1,5 @@
 Fitter report for LogicalStep_Lab3_top
-Tue Jul 14 14:58:04 2020
+Tue Jul 14 15:59:23 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jul 14 14:58:04 2020       ;
+; Fitter Status                      ; Successful - Tue Jul 14 15:59:23 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; LogicalStep_Lab3_top                        ;
 ; Top-level Entity Name              ; LogicalStep_Lab3_top                        ;
@@ -157,7 +157,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.9%      ;
+;     Processor 2            ;   0.8%      ;
 +----------------------------+-------------+
 
 
@@ -1004,62 +1004,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+----------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                             ;
-+----------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                          ; Pad To Core Index ; Setting ;
-+----------------------------------------------+-------------------+---------+
-; sw[7]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[3]~0                 ; 0                 ; 6       ;
-; sw[3]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[3]~0                 ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~2               ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~5               ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~6               ; 0                 ; 6       ;
-; pb[3]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[3]~0                 ; 0                 ; 6       ;
-;      - mux:mux1|hex_out[2]~1                 ; 0                 ; 6       ;
-;      - mux:mux1|hex_out[1]~2                 ; 0                 ; 6       ;
-;      - mux:mux1|hex_out[0]~3                 ; 0                 ; 6       ;
-;      - Compx4:cmp1|singlecmp:inst3|sout~0    ; 0                 ; 6       ;
-;      - leds[7]~output                        ; 0                 ; 6       ;
-; sw[6]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[2]~1                 ; 1                 ; 6       ;
-; sw[2]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[2]~1                 ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~1               ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~4               ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~6               ; 0                 ; 6       ;
-; sw[5]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[1]~2                 ; 0                 ; 6       ;
-;      - Compx4:cmp1|singlecmp:inst3|sout~0    ; 0                 ; 6       ;
-; sw[1]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[1]~2                 ; 0                 ; 6       ;
-;      - Compx4:cmp1|singlecmp:inst3|sout~0    ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~0               ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~3               ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~7               ; 0                 ; 6       ;
-; sw[4]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[0]~3                 ; 0                 ; 6       ;
-; sw[0]                                        ;                   ;         ;
-;      - mux:mux1|hex_out[0]~3                 ; 1                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~0               ; 1                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~3               ; 1                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~7               ; 1                 ; 6       ;
-; pb[0]                                        ;                   ;         ;
-;      - controllerSteveNingzhi:ctrl1|blower   ; 1                 ; 6       ;
-;      - controllerSteveNingzhi:ctrl1|blower~0 ; 1                 ; 6       ;
-;      - leds[5]~output                        ; 1                 ; 6       ;
-; pb[1]                                        ;                   ;         ;
-;      - controllerSteveNingzhi:ctrl1|blower   ; 0                 ; 6       ;
-;      - controllerSteveNingzhi:ctrl1|blower~0 ; 0                 ; 6       ;
-;      - leds[4]~output                        ; 0                 ; 6       ;
-; pb[2]                                        ;                   ;         ;
-;      - controllerSteveNingzhi:ctrl1|blower   ; 0                 ; 6       ;
-;      - Tester:tst1|TEST_PASS~9               ; 0                 ; 6       ;
-;      - controllerSteveNingzhi:ctrl1|blower~0 ; 0                 ; 6       ;
-; clk_in                                       ;                   ;         ;
-+----------------------------------------------+-------------------+---------+
++---------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                            ;
++---------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                         ; Pad To Core Index ; Setting ;
++---------------------------------------------+-------------------+---------+
+; sw[7]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[3]~0                ; 0                 ; 6       ;
+; sw[3]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[3]~0                ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~2              ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~5              ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~6              ; 0                 ; 6       ;
+; pb[3]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[3]~0                ; 0                 ; 6       ;
+;      - mux:mux1|hex_out[2]~1                ; 0                 ; 6       ;
+;      - mux:mux1|hex_out[1]~2                ; 0                 ; 6       ;
+;      - mux:mux1|hex_out[0]~3                ; 0                 ; 6       ;
+;      - Compx4:cmp1|singlecmp:inst3|sout~0   ; 0                 ; 6       ;
+;      - leds[7]~output                       ; 0                 ; 6       ;
+; sw[6]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[2]~1                ; 1                 ; 6       ;
+; sw[2]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[2]~1                ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~1              ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~4              ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~6              ; 0                 ; 6       ;
+; sw[5]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[1]~2                ; 0                 ; 6       ;
+;      - Compx4:cmp1|singlecmp:inst3|sout~0   ; 0                 ; 6       ;
+; sw[1]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[1]~2                ; 0                 ; 6       ;
+;      - Compx4:cmp1|singlecmp:inst3|sout~0   ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~0              ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~3              ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~7              ; 0                 ; 6       ;
+; sw[4]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[0]~3                ; 0                 ; 6       ;
+; sw[0]                                       ;                   ;         ;
+;      - mux:mux1|hex_out[0]~3                ; 1                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~0              ; 1                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~3              ; 1                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~7              ; 1                 ; 6       ;
+; pb[0]                                       ;                   ;         ;
+;      - controllerSteveNingzhi:ctrl1|run_n   ; 1                 ; 6       ;
+;      - controllerSteveNingzhi:ctrl1|run_n~0 ; 1                 ; 6       ;
+;      - leds[5]~output                       ; 1                 ; 6       ;
+; pb[1]                                       ;                   ;         ;
+;      - controllerSteveNingzhi:ctrl1|run_n   ; 0                 ; 6       ;
+;      - controllerSteveNingzhi:ctrl1|run_n~0 ; 0                 ; 6       ;
+;      - leds[4]~output                       ; 0                 ; 6       ;
+; pb[2]                                       ;                   ;         ;
+;      - controllerSteveNingzhi:ctrl1|run_n   ; 0                 ; 6       ;
+;      - Tester:tst1|TEST_PASS~9              ; 0                 ; 6       ;
+;      - controllerSteveNingzhi:ctrl1|run_n~0 ; 0                 ; 6       ;
+; clk_in                                      ;                   ;         ;
++---------------------------------------------+-------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1385,7 +1385,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  42 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  32 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1403,11 +1403,11 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file N:/ECE-125/Lab3/output_files/LogicalStep_Lab3_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5319 megabytes
-    Info: Processing ended: Tue Jul 14 14:58:07 2020
+    Info: Peak virtual memory: 5322 megabytes
+    Info: Processing ended: Tue Jul 14 15:59:26 2020
     Info: Elapsed time: 00:00:25
     Info: Total CPU time (on all processors): 00:00:06
 
