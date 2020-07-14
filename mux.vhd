@@ -1,4 +1,3 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 library work;
@@ -16,7 +15,6 @@ entity mux is
  
  begin
  
- -- complete the with/select construct with the VHDL coding from the Lab Manual for Lab2.
  
  -- output corresponding input based on binary values
  with mux_select select

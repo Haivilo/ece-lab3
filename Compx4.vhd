@@ -30,6 +30,10 @@ inst3: singlecmp port map (inputA(1), inputB(1), bit3);
 
 inst4: singlecmp port map (inputA(0), inputB(0), bit4);
 
+--- result(0) is A > B
+--- result(1) is A = B
+--- result(2) is A < B
+
 results(0) <= bit1(0) or (bit1(1) and bit2(0)) or (bit1(1) and bit2(1) and bit3(0)) or (bit1(1) and bit2(1) and bit3(1) and bit4(0));
 
 results(1) <= bit1(1) and bit2(1) and bit3(1) and bit4(1);

@@ -15,8 +15,9 @@ signal hotter,colder, running	: std_logic;
 
 
  begin
- 
-hotter <= cmp(0);
+
+-- assign appropriate value to signals
+hotter <= cmp(0); 
 colder <= cmp(2);
 running <= door OR test OR window or cmp(1);
 inc <= hotter;
@@ -25,10 +26,10 @@ run_n <= running;
 furnace <= hotter;
 at_temp <= cmp(1);
 ac <= colder;
-blower <= not running;
-windowOut <= window;
+blower <= not running;  -- blower is ON when run_n is 0
+windowOut <= window;		-- assign window door and vacation
 doorOut <= door;
-vacationOut <= vacation;
+vacationOut <= vacation;  
  end controllerSteveNingzhi_logic;
  
  
